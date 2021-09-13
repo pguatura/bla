@@ -1,12 +1,17 @@
 version: 2.1
 
 jobs:
-    complete-pipeline:
-      
-
+  complete-pipeline:
+    docker:
+      - image: pguatura/android-fastlane:release-2.0.10
+    steps:
+      - run:
+          name: "Start"
+          command: echo "Oi"
 
 workflows:
   version: 2
   complete-pipeline:
     jobs:
       - complete-pipeline
+        
